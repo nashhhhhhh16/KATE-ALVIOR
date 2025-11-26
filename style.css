@@ -1,4 +1,4 @@
-/* EXTERNAL CSS*/
+/* EXTERNAL CSS */
 
 /* Reset and Base Styles */
 * {
@@ -42,61 +42,91 @@ body {
 /* Hero Image Styling */
 .hero-image {
     z-index: 2;
-    padding-bottom: 70px;
+    margin-bottom: 87px;
+    margin-right: 10px;
 }
 
 .profile-photo {
-    width: 300px;
-    height: 400px;
-    margin-bottom: 100px;
-    margin-right: 100px;
+    width: 500px;
+    height: 550px;
     object-fit: contain;
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    
     transition: transform 0.3s ease;
 }
 
 .profile-photo:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
+
+/*         RESPONSIVE         */
+
+/*Large screens (PC / laptops) */
+@media (min-width: 1201px) {
     .hero-section {
-        padding: 60px 50px;
-    }
-    
-    .name-image-container img,
-    .surname-image-container img {
-        max-width: 400px !important;
+        padding: 80px 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
+/*Tablets (iPad sizes: 768px–1200px) */
+@media (max-width: 1200px) and (min-width: 769px) {
+    .hero-section {
+        padding: 60px 40px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .profile-photo {
+        width: 380px;
+        height: 420px;
+    }
+
+    .greeting {
+        font-size: 22px;
+    }
+
+    .description {
+        font-size: 18px;
+        max-width: 500px;
+    }
+}
+
+/*Mobile (phones under 768px) */
 @media (max-width: 768px) {
+
     .hero-section {
         flex-direction: column;
-        padding: 40px 30px;
+        padding: 40px 20px;
         text-align: center;
+        gap: 20px;
     }
-    
-    .name-image-container img,
-    .surname-image-container img {
-        max-width: 100% !important;
-        margin-left: 0 !important;
+
+    .greeting {
+        font-size: 20px;
     }
-    
+
+    .description {
+        font-size: 16px;
+        max-width: 100%;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
     .profile-photo {
-        width: 300px;
-        height: 400px;
-        margin-top: 40px;
+        width: 260px;
+        height: 340px;
+        margin-top: 20px;
     }
-    
+
     .hobbies-section,
     .about-section {
-        padding: 60px 30px;
+        padding: 40px 20px;
     }
-    
+
     .hobbies-container {
         grid-template-columns: 1fr;
     }
