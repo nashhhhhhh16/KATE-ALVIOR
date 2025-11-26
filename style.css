@@ -1,0 +1,103 @@
+/* EXTERNAL CSS*/
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Hero Content Styling */
+.hero-content {
+    max-width: 700px;
+    z-index: 2;
+}
+
+.greeting {
+    font-size: 24px;
+    color: #c0c0c0;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.description {
+    font-size: 20px;
+    color: #d1d1d1;
+    line-height: 1.8;
+    margin-top: 30px;
+    max-width: 600px;
+}
+
+.description strong {
+    color: #f4a621;
+    font-weight: 700;
+}
+
+/* Hero Image Styling */
+.hero-image {
+    z-index: 2;
+    padding-bottom: 70px;
+}
+
+.profile-photo {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero-section {
+        padding: 60px 50px;
+    }
+    
+    .name-image-container img,
+    .surname-image-container img {
+        max-width: 400px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 40px 30px;
+        text-align: center;
+    }
+    
+    .name-image-container img,
+    .surname-image-container img {
+        max-width: 100% !important;
+        margin-left: 0 !important;
+    }
+    
+    .profile-photo {
+        width: 300px;
+        height: 400px;
+        margin-top: 40px;
+    }
+    
+    .hobbies-section,
+    .about-section {
+        padding: 60px 30px;
+    }
+    
+    .hobbies-container {
+        grid-template-columns: 1fr;
+    }
+}
